@@ -24,7 +24,7 @@ def get_from_shelf(keyword):
         pyperclip.copy(mcb_shelf[keyword])
     else:
         mcb_shelf.close()
-        print_error_and_exit(f"Error: {keyword} wasn't previously saved.")
+        print_error_and_exit(f"Error: {keyword} doesn't exist.")
     mcb_shelf.close()
     print(f"{keyword} successfully copied.")
     
@@ -35,7 +35,7 @@ def delete_keyword(keyword):
         mcb_shelf.close()
     else:
         mcb_shelf.close()
-        print_error_and_exit(f"Error: {keyword} wasn't previously saved.")
+        print_error_and_exit(f"Error: {keyword} doesn't exist.")
     print(f"{keyword} successfully deleted.")
     
 def list_all_keywords():
