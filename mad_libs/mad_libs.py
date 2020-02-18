@@ -1,18 +1,23 @@
 #! python3
 # mad_libs.py - Funny word game.
-# Usage:
-# mad_libs.py <filename_with_extension> - Starts game with specified file. Results are saven in "complete_story.txt" file
+
+usage_information = """Usage:
+It needs to be run in the same directory where the story file is.
+mad_libs.py <filename.txt> - Starts game with specified file. Results are saved in "complete_story.txt" file. 
+"""
 
 import sys, os, re
 from pathlib import Path
 
 if len(sys.argv) != 2:
-    print("error")
+    print("Wrong number of arguments")
+    print(usage_information)
     exit()
 
 incomplete_story_location = str(Path(sys.path[0]) / sys.argv[1])
 if not os.path.exists(incomplete_story_location):
-    print("error")
+    print(f"Couldn't find story file in {incomplete_story_location}")
+    print(usage_information)
     exit()
 
 regex = re.compile(r"ADJECTIVE|NOUN|ADVERB|VERB")
