@@ -1,5 +1,5 @@
 #! python3
-# mcb.pyw - Multi clipboard programme. Saves and loads pieces of text to the clipboard.
+# mcb.pyw - Multi clipboard programe. Saves and loads pieces of text to the clipboard.
 # Usage:
 usage_info = """
 Usage:
